@@ -1,9 +1,9 @@
 import os
-from dagster_dbt import DbtCliClientResource
+from dagster_dbt import DbtCliResource
 from dagster_dbt import load_assets_from_dbt_project
 
 resources = {
-    "dbt": DbtCliClientResource(
+    "dbt": DbtCliResource(
         project_dir=os.getenv("DBT_PROJECT_DIR"),
         profiles_dir=os.getenv("DBT_PROFILES_DIR"),
     ),
